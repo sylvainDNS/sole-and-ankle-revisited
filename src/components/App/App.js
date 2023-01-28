@@ -18,7 +18,17 @@ const App = () => {
 };
 
 const Main = styled.main`
-  padding: 64px 32px;
+  padding:
+    clamp(
+      2rem,
+      6.8vw,
+      4rem
+    )
+    clamp(
+      1rem,
+      3.4vw,
+      2rem
+    );
 `;
 
 export default App;
