@@ -3,8 +3,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { COLORS, QUERIES, WEIGHTS } from '../../constants';
-
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
@@ -16,7 +14,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
         <header>
           <UnstyledButton onClick={onDismiss}>
             <VisuallyHidden>Dismiss menu</VisuallyHidden>
-            <Icon id="close" strokeWidth={2} size={28} color={COLORS.gray[900]}/>
+            <Icon id="close" strokeWidth={2} size={28} />
           </UnstyledButton>
         </header>
         <Nav>
@@ -57,8 +55,8 @@ const Content = styled(DialogContent)`
   padding: 32px;
   width: min(300px, 100%);
 
-  background-color: ${COLORS.white};
-  color: ${COLORS.gray[900]};
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
 
   button {
     margin: -4px -12px 0 auto;
@@ -70,7 +68,7 @@ const Link = styled.a`
   color: inherit;
 
   &.active {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -79,7 +77,7 @@ const Nav = styled.nav`
   flex-direction: column;
   gap: 22px;
   font-size: ${18 / 16}rem;
-  font-weight: ${WEIGHTS.medium};
+  font-weight: var(--weight-medium);
   text-transform: uppercase;
 `;
 
@@ -88,7 +86,7 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   font-size: ${14 / 16}rem;
 `;
 
